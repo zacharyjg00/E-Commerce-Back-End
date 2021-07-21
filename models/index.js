@@ -19,6 +19,7 @@ Product.belongsToMany(Tag, {
   through: {
     model: ProductTag
   },
+  foreignKey: "product_id",
   as: "tags"
 });
 
@@ -27,6 +28,7 @@ Tag.belongsToMany(Product, {
   through: {
     model: ProductTag
   },
+  foreignKey: "tag_id",
   as: "products"
 });
 
